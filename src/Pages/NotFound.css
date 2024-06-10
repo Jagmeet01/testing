@@ -1,0 +1,36 @@
+.PageNotFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.PageNotFound > svg {
+    color: tomato;
+    width: 90px;
+    height: 90px;
+    transition: all 0.5s;
+}
+.PageNotFound > svg:hover {
+    color: rgb(244, 57, 24);
+}
+
+.PageNotFound > p  {
+    font-size: 40px;
+}
+
+.PageNotFound > a {
+    color: rgb(255, 255, 255);
+    width: 110px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    transition: all 0.5s;
+}
+.PageNotFound > a:hover {
+    background-color: rgb(244, 57, 24);
+}
