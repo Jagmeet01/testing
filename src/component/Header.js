@@ -42,7 +42,7 @@ const Header = () => {
             <div className="flex-div gap-[2rem]">
               <li className="nav-item">
                 <NavLink to="/" className="nav-links" onClick={toggleMenu}>
-                  Home123
+                  Home
                 </NavLink>
               </li>
               <li className="nav-item">
