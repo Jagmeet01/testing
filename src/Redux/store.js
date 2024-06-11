@@ -44,7 +44,7 @@ const reducer = combineReducers({
   allUsers: allUsersReducer,
   userDetails: userDetailsReducer,
   productReviews: productReviewsReducer,
-  review: reviewReducer
+  review: reviewReducer,
 });
 
 // initialState
@@ -64,7 +64,8 @@ const middleware = [thunk];
 const store = legacy_createStore(
   reducer,
   initialState,
-  composeWithDevTools(applyMiddleware(...middleware))
+  applyMiddleware(...middleware)
+  // composeWithDevTools(applyMiddleware(...middleware))
 );
 
 export default store;
