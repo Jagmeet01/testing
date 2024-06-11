@@ -37,8 +37,10 @@ import PaymentSample from "./Pages/PaymentSample.js";
 import NotFound from "./Pages/NotFound.js";
 
 function App() {
+  
   useEffect(() => {
-    store.dispatch(loadUser());
+    const token =localStorage.getItem('token')
+    store.dispatch(loadUser(token));
   }, []);
   return (
     <Router>

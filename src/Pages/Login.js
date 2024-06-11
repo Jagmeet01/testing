@@ -16,7 +16,8 @@ const Login = () => {
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
-
+  const d = useSelector((state) => state.user);
+  console.log("ddddd",d)
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -25,8 +26,7 @@ const Login = () => {
     dispatch(login(loginEmail, loginPassword));
   };
 
-  const redirect = location.search ? location.search.split( "=" )[1] : "/account";
-
+  const redirect = location.search ? location.search.split("=")[1] : "/account";
 
   useEffect(() => {
     if (error) {
@@ -34,8 +34,8 @@ const Login = () => {
       dispatch(clearErrors());
     }
 
-    if(isAuthenticated){
-      navigate(redirect)
+    if (isAuthenticated) {
+      navigate(redirect);
     }
   }, [dispatch, error, alert, isAuthenticated, redirect, navigate]);
 

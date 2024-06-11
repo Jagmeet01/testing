@@ -37,7 +37,7 @@ export const getProduct =
   async (dispatch) => {
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
-
+     
       let link = `${url}api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
 
       if (category) {
@@ -62,8 +62,13 @@ export const getProduct =
 export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
-
-    const { data } = await axios.get("/api/v1/admin/products");
+    const token =localStorage.getItem('token')
+    const config = {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    };
+    const { data } = await axios.get(`${url}api/v1/admin/products`,config);
 
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,
@@ -87,7 +92,7 @@ export const createProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `/api/v1/admin/product/new`,
+      `${url}api/v1/admin/product/new`,
       productData,
       config
     );
@@ -112,7 +117,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.put(`/api/v1/admin/product/${id}`, productData, config );
+    const { data } = await axios.put(`${url}api/v1/admin/product/${id}`, productData, config );
     dispatch({
       type: UPDATE_PRODUCT_SUCCESS,
       payload: data.success,
@@ -130,7 +135,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
 
-    const { data } = await axios.delete(`/api/v1/admin/product/${id}`);
+    const { data } = await axios.delete(`${url}api/v1/admin/product/${id}`);
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
       payload: data.success,
@@ -169,7 +174,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.put(`/api/v1/review`, reviewData,config);
+    const { data } = await axios.put(`${url}api/v1/review`, reviewData,config);
     dispatch({
       type: NEW_REVIEW_SUCCESS,
       payload: data.success,

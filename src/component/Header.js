@@ -8,7 +8,6 @@ import UserOptions from "./UserOptions";
 
 const Header = () => {
   const { user, isAuthenticated } = useSelector((state) => state.user);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {

@@ -37,8 +37,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "vercel-postbuild": "npm install --legacy-peer-deps && npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +59,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
-  },
-  "proxy": "http://192.168.29.205:4000"
+  }
 }
