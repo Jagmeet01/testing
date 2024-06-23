@@ -3,10 +3,8 @@
     max-width: 100%;
     box-sizing: border-box;
     background-color: rgb(235, 235, 235);
-    position: fixed;
     top: 13%;
     left: 0;
-    
     min-height: 94vh;
     display: flex;
     flex-direction: column;

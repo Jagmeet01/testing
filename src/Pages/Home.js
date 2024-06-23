@@ -50,7 +50,7 @@ const Home = () => {
 
             <div>
               <div className="container">
-                <div className="flex justify-center w-4/5 flex-wrap	gap-4 my-6">
+                <div className="flex justify-center w-[80%] flex-wrap	gap-4 my-6">
                   {products?.map((product) => (
                     <ProductCard product={product} />
                   ))}

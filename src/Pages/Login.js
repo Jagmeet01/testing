@@ -16,8 +16,7 @@ const Login = () => {
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
-  const d = useSelector((state) => state.user);
-  console.log("ddddd",d)
+  
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -46,7 +45,7 @@ const Login = () => {
       ) : (
         <>
           <div className="">
-            <div className="flex flex-col justify-center items-center md:flex-row max-w-7xl w-full">
+            <div className="flex flex-col-reverse justify-center items-center md:flex-row  w-screen">
               <div className=" w-[70%] ">
                 <div className="text-xl cursor-pointer flex flex-col justify-center items-center mt-5 md:mt-0 py-4">
                   <h1 className="font-semibold text-xl md:text-5xl text-gray-600 m-2">
@@ -109,7 +108,7 @@ const Login = () => {
                 </form>
               </div>
 
-              <div className="h-[100vh] w-[80%] sm:w-[30%]  bg-gradient-to-l from-blue-400 to-emerald-400  items-center flex justify-center">
+              <div className="min-h-[50vh] w-[80%] md:w-[30%] md:h-[100vh] bg-gradient-to-l from-blue-400 to-emerald-400  items-center flex justify-center">
                 <div className="text-white text-base font-semibold text-center my-10 space-y-2 m-2">
                   <h1 className="text-5xl">New Here?</h1>
                   <h1 className="">

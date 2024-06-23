@@ -56,7 +56,9 @@
 .createProductFormFile > input {
     display: flex;
     padding: 0%;
+    padding: 2.5vmax 0 !important;
 }
+
 
 .createProductFormFile > input::file-selector-button {
     cursor: pointer;
@@ -114,7 +116,9 @@
     }
 
     .createProductForm {
-        padding: 5vmax;
+        padding: 5vmax; 
+        min-height: 90vh;
+        margin: 0;
     }
     .createProductForm > div > input,
     .createProductForm > div > select,
@@ -131,9 +135,11 @@
         border-radius: 100%;
     }
     .createProductFormFile > input::file-selector-button {
-        height: 7vh;
+        height: 3.5vh;
         font: 400 1.8vmax cursive;
     }
+
+   
     .craeteProductBtn {
         font:  300 1.9vmax "Roboto";
         padding: 1.8vmax;

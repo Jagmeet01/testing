@@ -27,10 +27,15 @@ export const createOrder = (order) => async (dispatch, getState) => {
   try {
     dispatch({ type: CREATE_ORDER_REQUEST });
 
+   
+
+
+    const token =localStorage.getItem('token')
     const config = {
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Contant-Type": "application/json",
+        'Authorization': `Bearer ${token}`
+      }
     };
     const { data } = await axios.post(`${url}api/v1/order/new`, order, config);
 
@@ -87,11 +92,15 @@ export const updateOrder = (id, order) => async (dispatch, getState) => {
     try {
       dispatch({ type: UPDATE_ORDER_REQUEST });
   
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
+     
+
+      const token =localStorage.getItem('token')
+    const config = {
+      headers: {
+        "Contant-Type": "application/json",
+        'Authorization': `Bearer ${token}`
+      }
+    };
       const { data } = await axios.put(`${url}api/v1/admin/order/${id}`, order, config);
   
       dispatch({ type: UPDATE_ORDER_SUCCESS, payload: data.success });
@@ -109,7 +118,16 @@ export const deleteOrder = (id) => async (dispatch, getState) => {
     try {
       dispatch({ type: DELETE_ORDER_REQUEST });
   
-      const { data } = await axios.delete(`${url}api/v1/admin/order/${id}`);
+
+      const token =localStorage.getItem('token')
+    const config = {
+      headers: {
+       
+        'Authorization': `Bearer ${token}`
+      }
+    };
+
+      const { data } = await axios.delete(`${url}api/v1/admin/order/${id}`, config);
   
       dispatch({ type: DELETE_ORDER_SUCCESS, payload: data.success });
     } catch (error) {
@@ -129,7 +147,15 @@ export const getOrderDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: ORDER_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`${url}api/v1/order/${id}`);
+    const token =localStorage.getItem('token')
+    const config = {
+      headers: {
+        
+        'Authorization': `Bearer ${token}`
+      }
+    };
+
+    const { data } = await axios.get(`${url}api/v1/order/${id}`, config);
 
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data.order });
   } catch (error) {

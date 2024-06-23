@@ -60,7 +60,7 @@ const Shipping = () => {
             </div>
 
                 <form onSubmit={shippingSubmit}>
-                  <div className="flex flex-col justify-center items-center  md:space-y-3">
+                  <div className="flex flex-col justify-center items-center space-y-3  md:space-y-3">
                     <div className=" text-center sm:flex sm:gap-6 sm:h-11 ">
                         <HomeIcon />
                       <input
@@ -69,7 +69,7 @@ const Shipping = () => {
                         required
                         value={address}
                         onChange={(e)=> setAddress(e.target.value)}
-                        className="  bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                        className=" h-11 w-[230px] bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
                       />
                     </div>
 
@@ -81,7 +81,7 @@ const Shipping = () => {
                         required
                         value={city}
                         onChange={(e)=> setCity(e.target.value)}
-                        className=" bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                        className="h-11 w-[230px] bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
                       />
                     </div>
 
@@ -93,7 +93,7 @@ const Shipping = () => {
                         required
                         value={pinCode}
                         onChange={(e)=> setPinCode(e.target.value)}
-                        className=" bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                        className="h-11 w-[230px] bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
                       />
                     </div>
 
@@ -105,7 +105,7 @@ const Shipping = () => {
                         required
                         value={phoneNo}
                         onChange={(e)=> setPhoneNo(e.target.value)}
-                        className="  bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                        className=" h-11 w-[230px] bg-gray-100 rounded-lg px-5 focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold  md:w-72 lg:w-[340px]"
                       />
                     </div>
 
@@ -115,7 +115,7 @@ const Shipping = () => {
                         required
                         value={country}
                         onChange={(e)=> setCountry(e.target.value)}
-                        className="  h-12 bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-300 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                        className="  h-11 w-[230px] bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-300 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
                       >
 
                         <option value="">Options</option>
@@ -136,7 +136,7 @@ const Shipping = () => {
                           required
                           value={state}
                           onChange={(e)=> setState(e.target.value)}
-                          className="   bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
+                          className=" h-11 w-[230px]  bg-gray-100 rounded-lg px-5  focus:border border-blue-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"
                         >
   
                           <option value="">State</option>
@@ -161,7 +161,7 @@ const Shipping = () => {
                       value="Continue"
                       disabled={state? false: true}
 
-                      className="w-[388px] py-3 rounded-md text-white bg-[tomato] font-medium cursor-pointer"
+                      className="w-[300px] md:w-[388px] py-3 rounded-md text-white bg-[tomato] font-medium cursor-pointer"
                     />
                     
                   </div>

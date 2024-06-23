@@ -30,7 +30,8 @@ const Products = () => {
 
   const { products, loading, error, productsCount, resultPerPage } =
     useSelector((state) => state.products);
-
+    
+    
   const { keyword } = useParams();
 
   const setCurrentPageNo = (e) => {
@@ -57,7 +58,7 @@ const Products = () => {
         <>
           <h2 className="productHeading">Products</h2>
 
-          <div className="flex">
+          <div className="flex productPage">
             <div className="filterBox">
               <Typography>Price</Typography>
               <Slider
@@ -104,6 +105,7 @@ const Products = () => {
 
           {resultPerPage < productsCount && (
             <div className="paginationBox">
+              
               <Pagination
                 activePage={currentPage}
                 itemsCountPerPage={resultPerPage}

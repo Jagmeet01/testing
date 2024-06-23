@@ -13,7 +13,7 @@
     align-items: center;
     margin: auto;
     padding: 3vmax;
-    background-color: white;
+    background-color: white; 
 }
 
 .productReviewsFormHeading {
@@ -62,6 +62,14 @@
         font-size: 2.8vmax;
     }
 
+    .craeteProductBtn{
+        height: 30px;
+        font-size: larger;
+    }
+
+    .createReviewsForm > button {
+        font-size: 2.8vmax;
+    }
 
 
 

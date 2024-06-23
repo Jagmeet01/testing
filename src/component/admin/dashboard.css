@@ -42,6 +42,10 @@
     margin: 0 2rem;
 }
 
+.dashboardSummaryBox2 > a > p {
+    font-size: 2vmax;
+}
+
 .dashboardSummaryBox2 > a {
     color: rgb(0, 0, 0);
     font: 300 2rem "Roboto";

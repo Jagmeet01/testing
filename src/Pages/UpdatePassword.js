@@ -37,7 +37,7 @@ const UpdatePassword = () => {
 
     if (isUpdated) {
       alert.success("Profile Updated Successfully");
-      alert.success("Profile Updated Successfully");
+      
 
       navigate("/account");
 

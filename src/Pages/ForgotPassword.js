@@ -23,6 +23,7 @@ const ForgotPassword = () => {
         myForm.set("email", email);
     
         dispatch(forgotPassword(myForm));
+       
       };
 
       useEffect(() => {
@@ -35,8 +36,12 @@ const ForgotPassword = () => {
     
         if (message) {
           alert.success(message);
-          
+          setTimeout(() => {
+            navigate("/password/reset/:token")
+            
+          }, 1000); 
         }
+        
       }, [dispatch, error, alert, message]);
 
   return (

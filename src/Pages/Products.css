@@ -9,6 +9,7 @@
 }
 
 .products {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -67,9 +68,12 @@
     color: white;
 }
 
+.productPage {
+    width: 100%;
+}
 
 .filterBox {
-   width: 200px;
+   width: 15%;
    padding: 0 20px;
 }
 
@@ -80,7 +84,7 @@
 .category-link {
     list-style: none;
     color: rgba(0, 0, 0, 0.61);
-    font: 400 0.8vmax "Roboto";
+    font: 400 1.2vmax "Roboto";
     margin: 0.4vmax;
     cursor: pointer;
     transition: all 0.5s;
@@ -93,10 +97,17 @@
 /*  media add for mobile */
 
 @media (max-width:768px) {
+
+    .productPage {
+        display: flex;
+        flex-direction: column;
+    }
+
     .filterBox {
-        width: 25vmax;
+        width: 40vmax;
         position: static;
         margin: auto;
+        flex-direction: column;
     } 
 
     .page.link {

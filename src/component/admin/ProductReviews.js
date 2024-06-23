@@ -28,7 +28,7 @@ const ProductReviews = () => {
     (state) => state.productReviews
   );
 
-  const [productId, setProductId] = useState("662b6e745dadcd2b6933c826");
+  const [productId, setProductId] = useState("");
 
   const deleteReviewHandler = (reviewId) => {
     dispatch(deleteReviews(reviewId, productId));
@@ -142,7 +142,7 @@ const ProductReviews = () => {
             </div>
 
             <Button
-              className="craeteProductBtn"
+              className="craeteProductBtn" 
               type="submit"
               disabled={
                 loading ? true : false || productId === "" ? true : false
@@ -150,6 +150,7 @@ const ProductReviews = () => {
             >
               Search
             </Button>
+            
           </form>
 
           {reviews && reviews.length > 0 ? (

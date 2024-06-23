@@ -42,7 +42,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="w-72">
+            <div className="w-72  mt-8 sm:mt-0">
               <h2 className="text-orange-500 text-2xl font-medium">
                 Get in Touch
               </h2>
@@ -56,7 +56,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="w-72">
+            <div className="w-72 mt-8 md:mt-0">
               <h2 className="text-orange-500 text-2xl font-medium">
                 Contact Us
               </h2>

@@ -8,14 +8,14 @@
     padding: 1vmax;
 }
 
+
+
 .productDetails > div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* justify-content: center; */
     justify-items: center;
-    /* align-items: center; */
     padding: 2vmax;
     box-sizing: border-box;
     border:  2px white solid;
@@ -24,12 +24,17 @@
 
 .productDetails > div:first-child  {
     width: 50vmax;
+  
 }
 
 .productDetails > div:last-child {
     align-items: flex-start;
    
 }
+
+
+
+
 
 .detailsBlock-1 >h2 {
     color: rgb(54, 54, 54);
@@ -225,12 +230,17 @@
     }
 
     .productDetails > div:first-child {
+        display: flex;
         justify-content: center;
-        margin-left: 20vmax;
+        
+       
     }
     .productDetails > div:last-child {
         align-items: center;
+        margin: 0;
     }
+    
+
 
     .detailsBlock-1 > h2 {
         font-size: 3.5vmax;

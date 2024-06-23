@@ -81,10 +81,7 @@ const ProductDetails = () => {
     dispatch({type:NEW_REVIEW_RESET});
   }
 
-  // if(isAuthenticated){
-  //   alert.success("Review Submitted Successfully");
-  //   dispatch({type:NEW_REVIEW_RESET});
-  // }
+
     dispatch(getProductDetails(id));
   }, [id, error, alert, dispatch, reviewError, success, isAuthenticated]);
 
@@ -100,12 +97,12 @@ const ProductDetails = () => {
         {loading ? <Loader /> :(
         <>
       <div className="productDetails">
-        <div className="carousel">
+        <div className="carousel ">
           <Carousel>
             {product.images &&
               product.images.map((items, i) => (
                 <img
-                  className="carouselImage"
+                  className="carouselImage h-64"
                   key={items.url}
                   src={items.url}
                   alt={`${i} Slide`}

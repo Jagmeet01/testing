@@ -14,7 +14,7 @@ import Sidebar from "./Sidebar";
 import { useNavigate } from "react-router-dom";
 import { NEW_PRODUCT_RESET } from "../../Redux/Constants";
 
-const NewProduct = () => {
+const   NewProduct = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
   const navigate = useNavigate();
