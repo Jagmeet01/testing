@@ -101,12 +101,14 @@ const ProductDetails = () => {
           <Carousel>
             {product.images &&
               product.images.map((items, i) => (
-                <img
-                  className="carouselImage h-64"
+               <div className="h-64" >
+                 <img
+                  className="carouselImage mx-auto h-full"
                   key={items.url}
                   src={items.url}
                   alt={`${i} Slide`}
                 />
+               </div>
               ))}
           </Carousel>
         </div>
@@ -114,7 +116,7 @@ const ProductDetails = () => {
         <div>
           <div className="detailsBlock-1">
             <h2>{product.name}</h2>
-            <p>Product # {product._id}</p>
+            
           </div>
           <div className="detailsBlock-2">
             <Rating {...options} />
